@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FeePayment.InvoiceController">
+   <children>
+      <Label layoutX="30.0" layoutY="205.0" prefHeight="29.0" prefWidth="111.0" text="the sum of Rs.">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font></Label>
+      <Label layoutX="204.0" layoutY="205.0" prefHeight="29.0" prefWidth="77.0" text="in words">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="175.0" prefHeight="21.0" prefWidth="111.0" text="Received from">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font></Label>
+      <Label layoutX="363.0" layoutY="175.0" prefHeight="29.0" prefWidth="99.0" text="on behalf of">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font></Label>
+      <Pane prefHeight="109.0" prefWidth="726.0">
+         <children>
+            <ImageView fx:id="invo_logo" fitHeight="97.0" fitWidth="101.0" layoutX="22.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="head1" layoutX="124.0" layoutY="2.0" prefHeight="43.0" prefWidth="253.0" text="Coffee Culture">
+               <font>
+                  <Font name="Andalus" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="head2" layoutX="125.0" layoutY="39.0" prefHeight="46.0" prefWidth="323.0" text="New Road, Pokhara, Nepal">
+               <font>
+                  <Font name="Andalus" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="head3" layoutX="125.0" layoutY="72.0" text="Phone: 061-522427">
+               <font>
+                  <Font name="Andalus" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="472.0" layoutY="50.0" prefHeight="30.0" prefWidth="126.0" text="Received Time :">
+               <font>
+                  <Font name="Andalus" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="invo_time" layoutX="585.0" layoutY="51.0" prefHeight="17.0" prefWidth="127.0" text="INVO342543" textFill="#189a14">
+               <font>
+                  <Font name="Andalus" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="472.0" layoutY="27.0" prefHeight="30.0" prefWidth="126.0" text="Received Date :">
+               <font>
+                  <Font name="Andalus" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="invo_date" layoutX="585.0" layoutY="27.0" prefHeight="30.0" prefWidth="111.0" text="8/10/2017">
+               <font>
+                  <Font name="Andalus" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Separator layoutY="108.0" prefHeight="4.0" prefWidth="726.0" style="-fx-background-color: #000000;" />
+      <Label layoutX="561.0" layoutY="255.0" prefHeight="29.0" prefWidth="142.0" text="Sign By Reveiver ">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="561.0" layoutY="274.0" prefHeight="17.0" prefWidth="154.0" text="______________" />
+      <Button fx:id="print_invoice" layoutX="444.0" layoutY="261.0" mnemonicParsing="false" onAction="#create_invoice" prefHeight="30.0" prefWidth="99.0" text="PRINT" />
+      <Label fx:id="invo_name" alignment="CENTER" layoutX="136.0" layoutY="175.0" prefHeight="29.0" prefWidth="225.0" text="Khim Bahadur Gurung,">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="invo_course" alignment="CENTER" layoutX="461.0" layoutY="177.0" prefHeight="29.0" prefWidth="218.0" text="Coffee Making Training">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="invo_fee" alignment="CENTER" layoutX="118.0" layoutY="207.0" prefHeight="29.0" prefWidth="99.0" text="17565">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="invo_word" alignment="CENTER" layoutX="283.0" layoutY="207.0" prefHeight="29.0" prefWidth="400.0" text="Seventeen Thousand Five Hundrade Sixty Five Only">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="127.0" prefHeight="29.0" prefWidth="99.0" text="Student ID :">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="invo_id" layoutX="127.0" layoutY="127.0" prefHeight="29.0" prefWidth="29.0" text="31">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="489.0" layoutY="127.0" prefHeight="29.0" prefWidth="87.0" text="Receipt No.">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="invo_no" layoutX="576.0" layoutY="127.0" prefHeight="29.0" prefWidth="111.0" text="INVO456G43">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="248.0" prefHeight="29.0" prefWidth="77.0" text="Address : ">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="269.0" prefHeight="29.0" prefWidth="87.0" text="Join Date : ">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="invo_address" layoutX="107.0" layoutY="248.0" prefHeight="29.0" prefWidth="371.0" text="Malepatan, Pokhara">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="invo_join_date" layoutX="114.0" layoutY="269.0" prefHeight="29.0" prefWidth="126.0" text="2017-09-23">
+         <font>
+            <Font name="Andalus" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="308.0" prefHeight="17.0" prefWidth="684.0" text="__________________________________________________________________________" />
+      <Label layoutX="139.0" layoutY="180.0" prefHeight="17.0" prefWidth="218.0" text="________________________" />
+      <Label layoutX="136.0" layoutY="211.0" prefHeight="17.0" prefWidth="63.0" text="_______" />
+      <Label layoutX="282.0" layoutY="211.0" prefHeight="17.0" prefWidth="416.0" text="_____________________________________________" />
+      <Label layoutX="459.0" layoutY="182.0" prefHeight="17.0" prefWidth="241.0" text="_________________________" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="346.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+
+
+	<children>
+      <ImageView fitHeight="502.0" fitWidth="769.0" layoutX="-7.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/loginimg.png" />
+         </image>
+      </ImageView>
+		<Pane layoutX="30.0" layoutY="19.0" opacity="0.88" prefHeight="312.0" prefWidth="366.0" style="-fx-background-color: #2B1913;"> 
+			<children>
+				<Label alignment="CENTER" contentDisplay="CENTER" layoutX="63.0" layoutY="4.0" prefHeight="43.0" prefWidth="235.0" text="Login Here" textFill="WHITE"> 
+					<font>
+						<Font name="Aharoni Bold" size="26.0" /> 
+					</font>
+				</Label>
+      		<Separator layoutY="50.0" opacity="0.63" prefHeight="0.0" prefWidth="366.0" /> 
+      		<TextField fx:id="uname" layoutX="32.0" layoutY="93.0" prefHeight="35.0" prefWidth="304.0" promptText="username"> 
+      			<font>
+      				<Font size="15.0" /> 
+      			</font>
+      		</TextField>
+      		<Label layoutX="32.0" layoutY="64.0" prefHeight="31.0" prefWidth="138.0" text="Username" textFill="WHITE"> 
+      			<font>
+      				<Font size="15.0" /> 
+      			</font>
+      		</Label>
+      		<PasswordField fx:id="password" layoutX="31.0" layoutY="165.0" prefHeight="35.0" prefWidth="304.0" promptText="password"> 
+      			<font>
+      				<Font size="15.0" /> 
+      			</font>
+      		</PasswordField>
+      		<Label layoutX="30.0" layoutY="140.0" text="Password" textFill="WHITE"> 
+      			<font>
+      				<Font size="15.0" /> 
+      			</font>
+      		</Label> 
+      		<Button fx:id="login" blendMode="ADD" layoutX="32.0" layoutY="246.0" mnemonicParsing="false" onAction="#loginUser" prefHeight="31.0" prefWidth="304.0" style="-fx-background-color: #2B1913;" text="Login" textFill="WHITE"> 
+      			<font>
+      				<Font name="System Bold" size="18.0" /> 
+      			</font>
+              
+               <cursor>
+               </cursor>
+      		</Button> 
+			</children>
+		</Pane>
+		<Label fx:id="statuslbl" alignment="CENTER" layoutX="95.0" layoutY="231.0" prefHeight="31.0" prefWidth="223.0" textFill="#f80707"> 
+			<font>
+				<Font size="15.0" /> 
+			</font>
+		</Label>
+				<ImageView fx:id="loginclose" fitHeight="21.0" fitWidth="15.0" layoutX="738.0" layoutY="7.0" onMouseClicked="#closeLogin" pickOnBounds="true" preserveRatio="true"> 
+					<image>
+						<Image url="@../../img/close.png" /> 
+					</image>
+				</ImageView>
+	</children>
+</AnchorPane>

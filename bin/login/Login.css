@@ -1,0 +1,14 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* this for LoginWindow */
+#loginclose:hover{
+	-fx-cursor:hand;
+}
+#uname,#password{
+	-fx-background-radius:0;
+}
+#login{
+	-fx-background-radius: 0;
+}
+#loginpane{
+	-fx-background-color: rgba(255, 255, 255, 0.5);
+}

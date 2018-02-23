@@ -1,0 +1,81 @@
+#std_list{
+	-fx-selection-bar: #3F2117;
+	-fx-selection-bar-text:white;
+	-fx-font-size:15px;
+}
+.root { 
+	-fx-focus-color: #3F2117; 
+	-fx-faint-focus-color: transparent;
+}
+.combo-box-popup .list-view .list-cell:hover,
+.combo-box-popup .list-view .list-cell:selected
+{
+    -fx-background-color: #3F2117;
+}
+.text-field,
+.spinner,
+.date-picker,
+.combo-box,
+#choose_image {
+	-fx-pref-height:30px;
+	-fx-font-size:14px;
+	-fx-background-radius:0.0 ;
+}
+.label{
+	-fx-font-size:14px;
+}
+
+#newgendercombobox,
+#stdaddress,
+#country,
+#stdname{
+	-fx-prompt-text-fill: red;
+}
+
+#newstdinfo{
+	-fx-background-insets: 0,1,2;
+	-fx-text-fill:#ffffff;
+	-fx-background-color:#66402D;
+	-fx-padding:5px;
+	-fx-font-size:16px;
+	-fx-font-weight:bold;
+}
+#btn_grp,
+#heading{
+	-fx-background-color: 
+        #707070,
+        linear-gradient(#fcfcfc, #f3f3f3),
+        linear-gradient(#f2f2f2 0%, #ebebeb 9%, #dddddd 50%, #cfcfcf 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-padding: 3 30 3 30;
+}
+#hidden_id,
+#status{
+	-fx-font-size:20px;
+	-fx-font-weight:bold;
+	-fx-text-fill:green;
+}
+
+#add_new_std,
+#save_std,
+#update_std,
+#delete_std{
+	-fx-background-color: 
+        #000000,
+        linear-gradient(#3F2117, #A97A60),
+        linear-gradient(#3F2117, #A97A60),
+        linear-gradient(#3F2117, #A97A60);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight:bold;
+}
+
+#add_new_std:hover,
+#save_std:hover,
+#update_std:hover,
+#delete_std:hover {
+    -fx-background-insets: 9,1,9,3;
+    -fx-cursor:hand;
+}

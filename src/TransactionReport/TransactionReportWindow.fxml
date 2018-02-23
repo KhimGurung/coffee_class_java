@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="657.0" prefWidth="1218.0" stylesheets="@TransactionReport.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TransactionReport.TransactionReportController">
+   <children>
+      <Label fx:id="trans_title" layoutX="19.0" layoutY="15.0" prefHeight="40.0" prefWidth="784.0" text="Transactions Details" />
+      <Pane fx:id="heading" layoutX="19.0" layoutY="104.0" prefHeight="60.0" prefWidth="784.0">
+         <children>
+          <Button fx:id="only_out" layoutX="534.0" layoutY="17.0" mnemonicParsing="false" onAction="#search_by_money_out" prefHeight="31.0" prefWidth="110.0" text=" Money Out" />
+          <Button fx:id="only_in" layoutX="415.0" layoutY="17.0" mnemonicParsing="false" onAction="#search_by_money_in" prefHeight="31.0" prefWidth="110.0" text="Money In" />
+          <TextField fx:id="by_date" layoutX="38.0" layoutY="17.0" onKeyReleased="#search_by_date" onKeyTyped="#validate_number" prefWidth="148.0" promptText="Enter date" />
+          <Button fx:id="reset" layoutX="682.0" layoutY="17.0" mnemonicParsing="false" onAction="#reset" prefHeight="31.0" prefWidth="67.0" text="Reset" />
+            <Button fx:id="sujan" layoutX="305.0" layoutY="17.0" mnemonicParsing="false" onAction="#search_by_sujan" prefHeight="25.0" prefWidth="75.0" text="Sujan" />
+            <Button fx:id="arfan" layoutX="221.0" layoutY="17.0" mnemonicParsing="false" onAction="#search_by_arfan" prefHeight="31.0" prefWidth="75.0" text="Arfan" />
+         </children>
+      </Pane>
+      <TableView fx:id="trans_list" layoutX="19.0" layoutY="171.0" prefHeight="469.0" prefWidth="784.0">
+        <columns>
+          <TableColumn fx:id="trans_id" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="student_name" prefWidth="256.0" text="Name" />
+            <TableColumn fx:id="date" prefWidth="118.0" text="Date" />
+            <TableColumn fx:id="debit" prefWidth="118.0" text="Money In" />
+            <TableColumn fx:id="credit" minWidth="0.0" prefWidth="119.0" text="Money Out" />
+            <TableColumn fx:id="balance" minWidth="9.0" prefWidth="136.0" text="Balance" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="70.0" prefHeight="20.0" prefWidth="110.0" text="Total Money In : " />
+      <Label layoutX="277.0" layoutY="70.0" text="Total Money Out :" />
+      <Label layoutX="547.0" layoutY="70.0" prefHeight="20.0" prefWidth="110.0" text="Current Balance :" />
+      <Label fx:id="money_in" layoutX="126.0" layoutY="61.0" prefHeight="36.0" prefWidth="138.0" text="00.00" />
+      <Label fx:id="money_out" layoutX="394.0" layoutY="61.0" prefHeight="36.0" prefWidth="138.0" text="00.00" />
+      <Label fx:id="balancee" layoutX="657.0" layoutY="61.0" prefHeight="36.0" prefWidth="138.0" text="00.00" />
+      <Label fx:id="report_description" layoutX="819.0" layoutY="18.0" prefHeight="20.0" prefWidth="385.0" text="Report Description" />
+      <TextArea fx:id="details" layoutX="830.0" layoutY="151.0" prefHeight="176.0" prefWidth="364.0" promptText="Report Details Here...." />
+      <Label layoutX="830.0" layoutY="65.0" prefHeight="20.0" prefWidth="321.0" text="Report Heading" />
+      <Label layoutX="830.0" layoutY="130.0" prefHeight="20.0" prefWidth="321.0" text="Report Details" />
+      <TextField fx:id="report_heading" layoutX="830.0" layoutY="86.0" prefWidth="364.0" promptText="Report Heading Here...." />
+    <Button fx:id="report" layoutX="831.0" layoutY="340.0" mnemonicParsing="false" onAction="#create_pdf" prefHeight="40.0" prefWidth="364.0" text="Save as PDF" />
+   </children>
+</AnchorPane>

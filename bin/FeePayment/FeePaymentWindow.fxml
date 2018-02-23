@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="476.0" prefWidth="1057.0" stylesheets="@FeePayment.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FeePayment.FeePaymentController">
+   <children>
+      <Label fx:id="room_number" layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="384.0" text="Fee Payment Form" />
+      <Label layoutX="108.0" layoutY="61.0" prefHeight="20.0" prefWidth="82.0" text="Student ID :" />
+      <Label fx:id="hidden_id" layoutX="188.0" layoutY="57.0" prefHeight="30.0" prefWidth="70.0" text="----" />
+      <Label layoutX="118.0" layoutY="135.0" prefHeight="20.0" prefWidth="70.0" text="Total Fee :" />
+      <Label layoutX="85.0" layoutY="97.0" prefHeight="20.0" prefWidth="105.0" text="Student Name :" />
+      <TextField fx:id="std_name" layoutX="189.0" layoutY="89.0" prefWidth="196.0" promptText="Enter student name or ID" />
+      <Pane fx:id="btn_grp" layoutX="14.0" layoutY="330.0" prefHeight="51.0" prefWidth="384.0">
+         <children>
+            <Button fx:id="save_room" layoutX="12.0" layoutY="8.0" mnemonicParsing="false" onAction="#save_student_transaction" prefHeight="37.0" prefWidth="112.0" text="Save" />
+            <Button fx:id="update_room" disable="true" layoutX="136.0" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="112.0" text="Update" />
+            <Button fx:id="delete_room" disable="true" layoutX="259.0" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="112.0" text="Delete" />
+         </children>
+      </Pane>
+      <Pane fx:id="heading" layoutX="433.0" layoutY="13.0" prefHeight="51.0" prefWidth="602.0">
+         <children>
+            <TextField fx:id="search_by_invoice" layoutX="455.0" layoutY="11.0" onKeyReleased="#search_by_invoice" prefWidth="144.0" />
+            <TextField fx:id="search_by_name" layoutX="38.0" layoutY="11.0" onKeyReleased="#search_by_name" prefWidth="239.0" />
+            <Label layoutX="323.0" layoutY="21.0" prefHeight="20.0" prefWidth="105.0" text="(( Search Here ))" />
+         </children>
+      </Pane>
+      <TableView fx:id="student_trans_list" layoutX="433.0" layoutY="71.0" prefHeight="388.0" prefWidth="602.0">
+        <columns>
+          <TableColumn fx:id="trans_id" prefWidth="37.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="239.0" text="Name" />
+          <TableColumn fx:id="date" prefWidth="101.0" text="Date" />
+          <TableColumn fx:id="amount" prefWidth="77.0" text="Amount" />
+            <TableColumn fx:id="invoice" prefWidth="147.0" text="Invoice No." />
+        </columns>
+      </TableView>
+      <Label layoutX="112.0" layoutY="174.0" prefHeight="20.0" prefWidth="70.0" text="Total Paid :" />
+      <Label layoutX="95.0" layoutY="211.0" prefHeight="20.0" prefWidth="97.0" text="Deu Amount :" />
+      <TextField fx:id="total_fee" editable="false" layoutX="189.0" layoutY="127.0" prefWidth="196.0" promptText="0" />
+      <Label fx:id="status" alignment="CENTER" layoutX="14.0" layoutY="295.0" prefHeight="20.0" prefWidth="384.0" />
+      <TextField fx:id="total_paid" editable="false" layoutX="189.0" layoutY="164.0" prefWidth="196.0" promptText="0" />
+      <TextField fx:id="due_fee" editable="false" layoutX="190.0" layoutY="201.0" prefWidth="196.0" promptText="0" />
+      <TextField fx:id="pay_amount" layoutX="190.0" layoutY="239.0" onKeyReleased="#check_pay" onKeyTyped="#validate_number" prefWidth="196.0" promptText="0" />
+      <Label layoutX="79.0" layoutY="246.0" prefHeight="20.0" prefWidth="105.0" text="Paying Amount :" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+.tab{
+	-fx-color:#504734;
+	-fx-font-weight:bold;
+	-fx-font-size:15;
+	-fx-padding:9;
+	-fx-border-style:none;
+}
+.tab:selected,
+#menutab{
+	-fx-focus-color:green;
+	-fx-background-color:green;
+	-fx-border-color:green;
+}
+.tab-pane,
+.tab-header-background{
+	-fx-background-color:#504734;
+}
+#roommanage,
+#alert,
+#resmanage,
+#customanage{
+	-fx-background-color: #533a22;
+	-fx-background-insets:2;
+	-fx-background-radius:2;
+    -fx-effect: dropshadow(one-pass-box, purple, 5, 0, 0, 0);
+}
+#toppane{
+	-fx-background-color: green;
+}
+#new_student{
+	-fx-image:url("../../img/new_student.png");
+}
+#new_student:hover{
+	-fx-image:url("../../img/new_student_hover.png"); 
+}
+#fee_payment{
+	-fx-image:url("../../img/fee_payment.png");
+}
+#fee_payment:hover{
+	-fx-image:url("../../img/fee_payment_hover.png"); 
+}
+#revenue_taken{
+	-fx-image:url("../../img/revenue_taken.png");
+}
+#revenue_taken:hover{
+	-fx-image:url("../../img/revenue_taken_hover.png"); 
+}
+#transaction{
+	-fx-image:url("../../img/transaction.png");
+}
+#transaction:hover{
+	-fx-image:url("../../img/transaction_hover.png"); 
+}

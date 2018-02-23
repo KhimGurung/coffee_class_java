@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="549.0" prefWidth="1228.0" stylesheets="@NewStudent.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewStudent.NewStudentController">
+   <children>
+      <TextField fx:id="stdname" layoutX="136.0" layoutY="172.0" onKeyTyped="#validate_name" prefWidth="266.0" />
+      <Label layoutX="30.0" layoutY="183.0" prefHeight="20.0" prefWidth="116.0" text="Student Name :" />
+      <Label fx:id="newstdinfo" layoutX="10.0" layoutY="21.0" prefHeight="40.0" prefWidth="264.0" text="Student Entry Form" />
+      <Label layoutX="70.0" layoutY="221.0" prefHeight="20.0" prefWidth="71.0" text="Address :" />
+      <TextField fx:id="stdaddress" layoutX="136.0" layoutY="211.0" prefWidth="266.0" />
+      <Label layoutX="50.0" layoutY="377.0" text="Finish Date :" />
+      <Label layoutX="73.0" layoutY="262.0" prefHeight="20.0" prefWidth="56.0" text="Gender :" />
+      <ComboBox fx:id="newgendercombobox" layoutX="136.0" layoutY="252.0" prefWidth="266.0" promptText="Select Gender" />
+      <Label layoutX="48.0" layoutY="301.0" prefHeight="20.0" prefWidth="88.0" text="Contact No :" />
+      <TextField fx:id="contact_no" layoutX="136.0" layoutY="291.0" onKeyTyped="#validate_number" prefWidth="266.0" />
+      <Label layoutX="61.0" layoutY="339.0" prefHeight="20.0" prefWidth="71.0" text="Join Date :" />
+      <Pane fx:id="btn_grp" layoutX="9.0" layoutY="483.0" prefHeight="54.0" prefWidth="403.0" stylesheets="@NewStudent.css">
+         <children>
+            <Button fx:id="save_std" layoutX="11.0" layoutY="8.0" mnemonicParsing="false" onAction="#save_student_detail" prefHeight="20.0" prefWidth="116.0" text="Save" />
+            <Button fx:id="update_std" disable="true" layoutX="142.0" layoutY="8.0" mnemonicParsing="false" onAction="#update_student" prefHeight="37.0" prefWidth="116.0" text="Update" />
+            <Button fx:id="delete_std" disable="true" layoutX="271.0" layoutY="8.0" mnemonicParsing="false" onAction="#delete_student" prefHeight="37.0" prefWidth="116.0" text="Delete" />
+         </children>
+      </Pane>
+      <Pane fx:id="heading" layoutX="423.0" layoutY="21.0" prefHeight="60.0" prefWidth="784.0">
+         <children>
+            <Label layoutX="10.0" layoutY="19.0" prefHeight="20.0" prefWidth="78.0" text="Search By :" />
+            <ComboBox fx:id="search_type" layoutX="83.0" layoutY="14.0" prefWidth="138.0" promptText="Select Option" />
+            <TextField fx:id="search_keyword" layoutX="232.0" layoutY="15.0" onKeyReleased="#search_student" prefWidth="138.0" promptText="Enter Keyword" />
+            <Button fx:id="add_new_std" layoutX="604.0" layoutY="12.0" mnemonicParsing="false" onAction="#add_new_std" text="Add New Student">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="std_list" layoutX="423.0" layoutY="85.0" prefHeight="452.0" prefWidth="784.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="219.0" text="Name" />
+            <TableColumn fx:id="address" prefWidth="151.0" text="Address" />
+            <TableColumn fx:id="std_gender" prefWidth="62.0" text="Gender" />
+            <TableColumn fx:id="std_contact" prefWidth="135.0" text="Contact No." />
+            <TableColumn fx:id="join_date" prefWidth="86.0" text="Join Date" />
+            <TableColumn fx:id="finish_date" prefWidth="94.0" text="Finish Date" />
+            <TableColumn fx:id="std_photo" minWidth="0.0" prefWidth="0.0" text="Photo" />
+            <TableColumn fx:id="total_fee" prefWidth="53.0" text="Fee" />
+        </columns>
+      </TableView>
+      <Label fx:id="status" alignment="CENTER" contentDisplay="TOP" layoutX="135.0" layoutY="441.0" prefHeight="37.0" prefWidth="266.0" />
+      <Label fx:id="hidden_id" layoutX="139.0" layoutY="100.0" prefHeight="30.0" prefWidth="64.0" text="----" />
+      <Label fx:id="std_hidden_id" layoutX="54.0" layoutY="105.0" prefHeight="20.0" prefWidth="88.0" text="Student ID :" />
+      <DatePicker fx:id="joindate" layoutX="135.0" layoutY="328.0" prefWidth="266.0" />
+      <DatePicker fx:id="finishdate" layoutX="135.0" layoutY="366.0" prefWidth="266.0" />
+      <ImageView fx:id="std_image" fitHeight="140.0" fitWidth="116.0" layoutX="283.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../std_photo/default.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="choose_image" layoutX="137.0" layoutY="133.0" mnemonicParsing="false" onAction="#openWindow" prefHeight="25.0" prefWidth="132.0" text="Choose Image">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="95.0" layoutY="415.0" text="Fee :" />
+      <TextField fx:id="fee" layoutX="135.0" layoutY="406.0" onKeyTyped="#validate_number" prefWidth="266.0" />
+   </children>
+</AnchorPane>

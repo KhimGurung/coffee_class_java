@@ -1,0 +1,41 @@
+#invo_name,
+#invo_course,
+#invo_fee,
+#invo_word{
+    -fx-font-weight:bold;
+}
+
+#print_invoice{
+	-fx-background-color: 
+        #000000,
+        linear-gradient(#3F2117, #A97A60),
+        linear-gradient(#3F2117, #A97A60),
+        linear-gradient(#3F2117, #A97A60);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight:bold;
+}
+
+#print_invoice:hover {
+    -fx-background-insets: 9,1,9,3;
+    -fx-cursor:hand;
+}
+.label{
+    	-fx-font-family:andalus;
+    	-fx-font-size:18px;
+    }
+#head1{
+    	-fx-font-size:40px;
+    }
+#head2{
+    	-fx-font-size:20px;
+    }
+#head3{
+	    -fx-font-size:15;
+}
+#invo_logo{
+	-fx-image:url("../../img/logo.png");
+}
+ 

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="584.0" prefWidth="1210.0" style="-fx-background-color: green;" stylesheets="@MainWindow.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainWindow.MainWindowController">
+   <children>
+      <AnchorPane fx:id="toppane" prefHeight="501.0" prefWidth="1373.0" style="-fx-background-color: #825c36;">
+         <children>
+            <ImageView fitHeight="324.0" fitWidth="1380.0" layoutX="-7.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/toppane.png" />
+               </image>
+            </ImageView>
+        <AnchorPane layoutY="308.0" minHeight="0.0" minWidth="0.0" prefHeight="194.0" prefWidth="1373.0">
+               <children>
+                  <Pane fx:id="alert" layoutX="113.0" layoutY="23.0" prefHeight="148.0" prefWidth="255.0">
+                     <children>
+                        <ImageView fx:id="new_student" fitHeight="93.0" fitWidth="98.0" layoutX="75.0" layoutY="8.0" onMouseClicked="#openNewStudentWindow" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <image>
+                              <Image url="@../../target/img/new_student.png" />
+                           </image>
+                        </ImageView>
+                        <Label contentDisplay="CENTER" layoutX="2.0" layoutY="108.0" onMouseClicked="#openNewStudentWindow" prefHeight="32.0" prefWidth="192.0" style="-fx-background-color: #ffffff;" text=" New Student">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="194.0" layoutY="108.0" onMouseClicked="#openNewStudentWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/end.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Pane>
+                  <Pane fx:id="resmanage" layoutX="405.0" layoutY="23.0" prefHeight="148.0" prefWidth="255.0">
+                     <children>
+                        <Label contentDisplay="CENTER" layoutX="3.0" layoutY="108.0" onMouseClicked="#openFeePaymentWindow" prefHeight="32.0" prefWidth="192.0" style="-fx-background-color: #ffffff;" text=" Fee Payment">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <ImageView fx:id="fee_payment" fitHeight="74.0" fitWidth="173.0" layoutX="42.0" layoutY="20.0" onMouseClicked="#openFeePaymentWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../target/img/fee_payment.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="195.0" layoutY="108.0" onMouseClicked="#openFeePaymentWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/end.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="customanage" layoutX="707.0" layoutY="23.0" prefHeight="148.0" prefWidth="255.0">
+                     <children>
+                        <Label layoutX="1.0" layoutY="108.0" onMouseClicked="#openRevenueTakenWindow" prefHeight="32.0" prefWidth="192.0" style="-fx-background-color: #ffffff;" text=" Revenue Taken">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <ImageView fx:id="revenue_taken" fitHeight="83.0" fitWidth="167.0" layoutX="48.0" layoutY="14.0" onMouseClicked="#openRevenueTakenWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../target/img/revenue_taken.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="193.0" layoutY="108.0" onMouseClicked="#openRevenueTakenWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/end.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="roommanage" layoutX="1003.0" layoutY="24.0" prefHeight="148.0" prefWidth="255.0">
+                     <children>
+                        <Label layoutX="3.0" layoutY="108.0" onMouseClicked="#openTransactionReportWindow" prefHeight="32.0" prefWidth="192.0" style="-fx-background-color: #ffffff;" text=" Transaction Detail">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <ImageView fx:id="transaction" fitHeight="93.0" fitWidth="150.0" layoutX="56.0" layoutY="14.0" onMouseClicked="#openTransactionReportWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../target/img/transaction.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="195.0" layoutY="108.0" onMouseClicked="#openTransactionReportWindow" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/end.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
